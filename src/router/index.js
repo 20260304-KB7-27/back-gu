@@ -28,6 +28,10 @@ const router = createRouter({
       name: 'kjy',
       component: () => import('@/pages/KimJuyoung.vue'),
     },
+    {
+      path: '/:paths(.*)*',
+      component: () => import('@/pages/NotFound.vue'),
+    },
   ],
 });
 
