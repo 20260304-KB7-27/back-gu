@@ -1,14 +1,19 @@
 <script setup>
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
+
+const route = useRouter();
 
 const props = defineProps({
   modelValue: Boolean,
+  userId: Number,
 });
 
 const emit = defineEmits(['update:modelValue']);
 
 const toggle = () => {
   emit('update:modelValue', !props.modelValue);
+  route.push(`/${props.userId}`);
 };
 
 const BtnYellowClass = computed(() => [
