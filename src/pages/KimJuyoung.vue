@@ -47,7 +47,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import axios from 'axios';
+import axios from '../utils/axios';
 import { useRouter } from 'vue-router';
 
 const juyoung = ref({});
@@ -55,7 +55,7 @@ const router = useRouter();
 
 const member = async () => {
   try {
-    const response = await axios.get('http://10.10.0.81:3000/members');
+    const response = await axios.get('/members');
     const data = response.data.find((member) => member.name === '김주영');
     console.log(data);
     juyoung.value = data;
