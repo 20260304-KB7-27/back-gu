@@ -16,20 +16,15 @@ import UserCard from '@/components/UserCard.vue';
 const users = ref([]);
 
 const getMembers = async () => {
-    const response = await axios.get("http://10.10.0.81:3000/members");
-    if (response.status === 200) {
-        users.value = response.data;
-    }
-}   
+  const response = await axios.get('http://10.10.0.81:3000/members');
+  if (response.status === 200) {
+    users.value = response.data;
+  }
+};
 
 onMounted(() => {
-    getMembers();
-})
-
+  getMembers();
+});
 </script>
 
-<style scoped>
-
-
-
-</style>
+<style scoped></style>
