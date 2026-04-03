@@ -57,7 +57,6 @@ const member = async () => {
   try {
     const response = await axios.get('/members');
     const data = response.data.find((member) => member.name === '김주영');
-    console.log(data);
     juyoung.value = data;
   } catch (error) {
     console.error('Error fetching members:', error);
