@@ -21,7 +21,11 @@ const BtnYellowClass = computed(() => [
 </script>
 
 <template>
-  <button @click="toggle" :class="BtnYellowClass">
+  <button
+    @click="toggle"
+    :class="BtnYellowClass"
+    :style="!props.modelValue ? 'background-color: #fcaf17;' : ''"
+  >
     {{ props.modelValue ? 'Following' : 'Follow' }}
   </button>
 </template>
