@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue';
-import ButtonYellow from './ButtonYellow.vue';
+import ButtonYellow from '@/components/ButtonYellow.vue';
 
 const props = defineProps({
   user: Object,
@@ -25,11 +25,11 @@ const followBtnClass = computed(() => [
     <div
       class="w-24 h-24 rounded-full flex items-center justify-center mb-4 shadow-inner"
     >
-      <span class="text-3xl opacity-70">{{ user.icon }}</span>
+      <span class="text-3xl opacity-70">👤</span>
     </div>
 
     <h2 class="text-[#645b4c] font-bold text-xl">{{ user.name }}</h2>
-    <p class="text-[#a39b8f] text-sm mb-6">{{ user.role }}</p>
+    <p class="text-[#a39b8f] text-sm mb-6">{{ user.email }}</p>
 
     <ButtonYellow v-model="isFollowed" />
   </div>
