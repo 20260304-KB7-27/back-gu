@@ -31,6 +31,6 @@ const followBtnClass = computed(() => [
     <h2 class="text-[#645b4c] font-bold text-xl">{{ user.name }}</h2>
     <p class="text-[#a39b8f] text-sm mb-6">{{ user.email }}</p>
 
-    <ButtonYellow v-model="isFollowed" />
+    <ButtonYellow v-model="isFollowed" :userId="user.id" />
   </div>
 </template>

@@ -11,12 +11,12 @@ import { dotenv } from 'dotenv';
 dotenv.config();
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [vue(), vueDevTools(), tailwindcss()],
-    resolve: {
-        alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
-        },
+  plugins: [vue(), vueDevTools(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+<<<<<<< HEAD
     server: {
         proxy: {
             '/api': {
@@ -26,4 +26,16 @@ export default defineConfig({
             },
         },
     },
+=======
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://10.10.0.81:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
+>>>>>>> origin/main
 });
