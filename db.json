@@ -1,0 +1,38 @@
+{
+  "team": {
+    "name": "백구",
+    "desc": "백구 = 백엔드 구함"
+  },
+  "members": [
+    {
+      "id": 1,
+      "name": "김주영",
+      "email": "myjuyoung2@gmail.com",
+      "githubURL": "https://github.com/1juyoung",
+      "team": "6팀",
+      "desc": "잘 부탁드립니당!",
+      "mbti": "ENTP"
+    },
+    {
+      "id": 2,
+      "name": "김충훈",
+      "email": "myjuyoung2@gmail.com",
+      "githubURL": "https://github.com/1juyoung",
+      "team": "6팀"
+    },
+    {
+      "id": 3,
+      "name": "강태훈",
+      "email": "myjuyoung2@gmail.com",
+      "githubURL": "https://github.com/1juyoung",
+      "team": "6팀"
+    },
+    {
+      "id": 4,
+      "name": "김나현",
+      "email": "myjuyoung2@gmail.com",
+      "githubURL": "https://github.com/1juyoung",
+      "team": "6팀"
+    }
+  ]
+}
