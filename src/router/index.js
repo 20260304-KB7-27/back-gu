@@ -9,22 +9,22 @@ const router = createRouter({
       component: () => import('@/pages/Home.vue'),
     },
     {
-      path: '/kch',
+      path: '/2',
       name: 'kch',
       component: () => import('@/pages/kch_page.vue'),
     },
     {
-      path: '/kth',
+      path: '/3',
       name: 'kth',
       component: () => import('@/pages/kth_page.vue'),
     },
     {
-      path: '/knh',
+      path: '/4',
       name: 'knh',
       component: () => import('@/pages/knh_page.vue'),
     },
     {
-      path: '/kjy',
+      path: '/1',
       name: 'kjy',
       component: () => import('@/pages/KimJuyoung.vue'),
     },
