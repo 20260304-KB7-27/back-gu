@@ -23,6 +23,11 @@ const router = createRouter({
       name: 'knh',
       component: () => import('@/pages/knh_page.vue'),
     },
+    {
+      path: '/kjy',
+      name: 'kjy',
+      component: () => import('@/pages/KimJuyoung.vue'),
+    },
   ],
 });
 
