@@ -6,6 +6,7 @@ export const useMember = () => {
 
     const fetchAllMembers = async () => {
         const res = await axios.get('http://10.10.0.81:3000/members');
+        // const res = await axios.get('http://localhost:3000/members'); // 임시
         console.log(res.data);
         if (res.status === 200) {
             users.value = res.data;
