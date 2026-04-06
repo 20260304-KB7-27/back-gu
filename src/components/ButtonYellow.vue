@@ -31,6 +31,6 @@ const BtnYellowClass = computed(() => [
     :class="BtnYellowClass"
     :style="!props.modelValue ? 'background-color: #fcaf17;' : ''"
   >
-    {{ props.modelValue ? 'Following' : 'Follow' }}
+    {{ props.modelValue ? '보러갔다옴' : '보러가기' }}
   </button>
 </template>

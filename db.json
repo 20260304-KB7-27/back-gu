@@ -16,9 +16,11 @@
     {
       "id": 2,
       "name": "김충훈",
-      "email": "myjuyoung2@gmail.com",
-      "githubURL": "https://github.com/1juyoung",
-      "team": "6팀"
+      "email": "kchun0513@hanyang.ac.kr",
+      "githubURL": "https://github.com/kchun0513",
+      "team": "6팀",
+      "desc": "하나에 꽂히면 계속 파고듭니다. 꾸준히 하려고 노력중",
+      "mbti": "ISTJ"
     },
     {
       "id": 3,

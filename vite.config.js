@@ -13,18 +13,17 @@ import tailwindcss from '@tailwindcss/postcss';
 export default defineConfig({
   plugins: [vue(), vueDevTools(), tailwindcss()],
   resolve: {
-        alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-        },
-        server: {
-            proxy: {
-                '/api': {
-                    target: '10.10.0.81:3000',
-                    changeOrigin: true,
-                    rewrite: (path) => path.replace(/^\/api/, ''),
-                },
-            },
-        },
-    }
-    }
-);
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://10.10.0.81:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
+});

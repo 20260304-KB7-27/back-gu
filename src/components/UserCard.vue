@@ -22,13 +22,18 @@ const followBtnClass = computed(() => [
 
 <template>
   <div class="flex flex-col items-center">
-    <div
-      class="w-24 h-24 rounded-full flex items-center justify-center mb-4 shadow-inner"
-    >
-      <span class="text-3xl opacity-70">👤</span>
+    <div class="p-10 bg-[#f4f2ee]">
+      <div
+        class="w-35 h-35 rounded-full flex items-center justify-center bg-[#f4f2ee] shadow-[6px_6px_12px_#d9d5ce,-6px_-6px_12px_#ffffff]"
+      >
+        <img
+          :src="`/${user.id}-img.jpeg`"
+          class="w-full h-full object-cover rounded-full"
+        />
+      </div>
     </div>
 
-    <h2 class="text-[#645b4c] font-bold text-xl">{{ user.name }}</h2>
+    <h2 class="text-[#645b4c] font-bold text-xl mb-3">{{ user.name }}</h2>
     <p class="text-[#a39b8f] text-sm mb-6">{{ user.email }}</p>
 
     <ButtonYellow v-model="isFollowed" :userId="user.id" />

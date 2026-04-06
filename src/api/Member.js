@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import axios from '@/utils/axios';
 
 export const useMember = () => {
-    const users = ref([]);
+  const users = ref([]);
 
     const fetchAllMembers = async () => {
         const res = await axios.get('http://10.10.0.81:3000/members');
@@ -13,5 +13,5 @@ export const useMember = () => {
         }
     };
 
-    return { fetchAllMembers, users };
+  return { fetchAllMembers, users };
 };

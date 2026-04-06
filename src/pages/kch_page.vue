@@ -27,7 +27,7 @@
                             <span class="text-red-400 font-bold">ISTJ</span>
                         </div>
                         <!-- <p class="text-gray-500 text-sm">{{ user.email }}</p> -->
-                        <p class="text-gray-500 text-sm">kchun0513@hanyang.ac.kr</p>
+                        <p class="text-gray-500 text-sm">{{ user.email }}</p>
                     </div>
 
                     <div class="flex flex-col space-y-4 text-gray-300">                   
@@ -43,7 +43,7 @@
                         </div>
 
                         <div class="expansion bg-gray-700 p-3 rounded-lg border-l-4 border-gray-500 text-gray-200 text-sm font-medium my-2 shadow-inner">
-                            "하나에 꽂히면 계속 파고듭니다. 꾸준히 하려고 노력중"
+                            {{ user.desc }}
                         </div>
 
                         <div class="bg-gray-900 p-4 rounded-xl border border-gray-700 mt-2 shadow-sm expansion">
@@ -121,7 +121,8 @@
 
     const openGithub = () => {
         if(user.value.githubURL) {
-            location.href = "https://github.com/kchun0513";
+            // location.href = "https://github.com/kchun0513";
+            location.href = user.value.githubURL;
         }
     }
     const openInsta = () => {
@@ -131,11 +132,7 @@
     }
 
     const moveToHome = (e) => {
-        // 1. 혹시 모를 브라우저 기본 동작 방지
         if (e) e.preventDefault(); 
-    
-        // 누가 이 함수를 불렀는지 추적!
-        console.trace("🚨 moveToHome이 여기서 실행됨!");
 
         buttonOn.value = false;
         setTimeout(() => { cardOn2.value = false }, 200);

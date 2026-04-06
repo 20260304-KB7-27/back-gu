@@ -47,7 +47,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import axios from '../utils/axios';
+import axios from '@/utils/axios';
 import { useRouter } from 'vue-router';
 
 const juyoung = ref({});
