@@ -16,13 +16,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-    server: {
-      proxy: {
-        '/api': {
-          target: '10.10.0.81:3000',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ''),
-        },
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://10.10.0.81:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },
