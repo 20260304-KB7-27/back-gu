@@ -31,7 +31,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import axios from '../utils/axios';
+import axios from '@/utils/axios';
 // import { today, getLocalTimeZone } from '@internationalized/date';
 import Card from '@/components/Card.vue';
 import UserCard from '@/components/UserCard.vue';
